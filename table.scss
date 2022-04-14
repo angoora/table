@@ -1,0 +1,99 @@
+@charset "UTF-8";
+.table {margin:10px 0;
+  &.ta_c,.ta_c {text-align:center;}
+  .ta_r {text-align:right;}
+  .ta_l {text-align:left;}
+  table {background-color:#fff;font-size:16px;border-top:2px solid #000;}
+  th,td {border-bottom:1px solid #ccc;border-left:1px solid #ccc;border-right:1px solid #ccc;padding:8px;
+    &:first-child {border-left:0;}
+    &:last-child {border-right:0;}
+  }
+  thead {background-color:#ddd;}
+  tbody {
+    th {background-color:#eee;}
+  }
+  tfoot {background-color:#ffdcdc;
+    th {background-color:#ffc4c4;}
+  }
+  &.scr {overflow-x:auto;overflow-y:hidden;
+    table {min-width:1000px;margin-top:1px;}
+  }
+  &.fx-hd {position:relative;border-bottom:1px solid #ccc;
+    .scr-y {overflow-x:hidden;overflow-y:scroll;
+      tbody{
+        tr:last-of-type {
+          th,td {border-bottom:0;}
+        }
+      }
+    }
+    .clone-tb {position:absolute;left:0;top:0;width:100%;z-index:1;
+      > tbody,tfoot{display:none;}
+    }
+  }
+  &.tableA.mbT {
+     tbody {
+      > tr {display:table;width:100%;
+        > th {
+          width: 140px;
+        }
+        
+        > th.hidden {
+          display: none;
+        
+          +td {
+            display: table-row;
+            width: 100%;
+            border-left: 0;
+            border-right: 0;
+        
+            >span,
+            >div {
+              display: table-cell;
+              padding: 8px;
+            }
+        
+            >span {
+              width: 140px;
+              text-align: center;
+              background-color: #eee;
+              border-right: 1px solid #ccc;
+              ;
+            }
+        
+          }
+        }
+      }
+        
+    }
+  }
+  &.tableB.mbT {
+    table {display:block;border:0;}
+    colgroup {display:none;}
+    thead {display:none;}
+    tbody {display:block;
+      > tr {
+        display: block;border:1px solid #000;
+        margin:10px auto;padding:10px 0;
+        width: 100%;
+        >td {
+          display: table;        
+          width: 100%;
+          border: 0;
+        
+          >span,
+          >div {
+            display: table-cell;
+            padding: 4px;
+          }
+        
+          >span {min-width:100px; text-align:center;  
+          }
+          > div {width:100%;}        
+        }
+      }     
+      
+      
+    }
+  }
+}
+

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>TABLE</title>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="table.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="table.js"></script>
+  <style>
+    #wrapper {
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 30px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <h1>테이블</h1>
+    <h2>기본형</h2>
+    <div class="table">
+      <table>
+        <caption>테이블 기본형</caption>
+        <thead>
+          <tr>
+            <th>구분1</th>
+            <th>구분2</th>
+            <th>구분3</th>
+            <th>구분4</th>
+            <th>구분5</th>
+            <th>구분6</th>
+            <th>구분7</th>
+            <th>구분8</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="ta_c">
+            <th>1열</th>
+            <td rowspan="2">2열</td>
+            <td colspan="2">3열</td>
+            <td rowspan="3">5열</td>
+            <td>6열</td>
+            <td>7열</td>
+            <td rowspan="2">8열</td>
+          </tr>
+          <tr>
+            <td rowspan="2">1열</td>
+            <td>3열</td>
+            <td>4열</td>
+            <td>6열</td>
+            <td>7열</td>
+          </tr>
+          <tr>
+            <td>2열</td>
+            <td>3열</td>
+            <td>4열</td>
+            <td>6열</td>
+            <td>7열</td>
+            <td>8열</td>
+          </tr>
+        </tbody>
+        <tfoot class="ta_r">
+          <tr>
+            <th>1열</th>
+            <td>2열</td>
+            <td>3열</td>
+            <td>4열</td>
+            <td>5열</td>
+            <td>6열</td>
+            <td>7열</td>
+            <td>8열</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <h2>x-스크롤 테이블 - scr클래스</h2>
+    <div class="table scr">
+      <table>
+        <caption>스크롤 테이블</caption>
+        <thead>
+          <tr>
+            <th>구분1</th>
+            <th>구분2</th>
+            <th>구분3</th>
+            <th>구분4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1열</td>
+            <td>2열</td>
+            <td>3열</td>
+            <td>4열</td>
+          </tr>
+          <tr>
+            <td>1열</td>
+            <td>2열</td>
+            <td>3열</td>
+            <td>4열</td>
+          </tr>
+          <tr>
+            <td>1열</td>
+            <td>2열</td>
+            <td>3열</td>
+            <td>4열</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2>y-스크롤 테이블(thead 고정) - fx-hd클래스</h2>
+    <!-- 테이블 헤더가 고정되고 스크롤 발생하는 경우 fx-hd 클래스 추가 
+        data-row="노출되고자 하는 줄의 개수" -->
+    <div class="table fx-hd" data-row="2">
+      <table>
+        <caption>가변 테이블2</caption>
+        <colgroup>
+          <col style="width:15%">
+          <col>
+          <col style="width:15%">
+          <col style="width:15%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>항목1</th>
+            <th>항목2</th>
+            <th>항목3</th>
+            <th>항목4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1행 1열</td>
+            <td><a href="#">힘차게 어디 원질이 황금시대의 얼음에 소리다.이것은 사랑의 불어 이상은 뿐이다. 이상은 우는 긴지라 보이는 대한 때문이다. 봄바람을 보이는 같은 꽃이 이상이
+                쓸쓸하랴? 얼마나 앞이 가진 듣는다.</a></td>
+            <td>1행 3열</td>
+            <td>1행 4열</td>
+          </tr>
+          <tr>
+            <td>2행 1열</td>
+            <td><a href="#">힘차게 어디 원질이 황금시대의 얼음에 소리다.이것은 사랑의 불어 이상은 뿐이다. 이상은 우는 긴지라 보이는 대한 때문이다. 봄바람을 보이는 같은 꽃이 이상이
+                쓸쓸하랴? 얼마나 앞이 가진 듣는다.</a></td>
+            <td>2행 3열</td>
+            <td>2행 4열</td>
+          </tr>
+          <tr>
+            <td>1행 1열</td>
+            <td><a href="#">힘차게 어디 원질이 황금시대의 얼음에 소리다.이것은 사랑의 불어 이상은 뿐이다. 이상은 우는 긴지라 보이는 대한 때문이다. 봄바람을 보이는 같은 꽃이 이상이
+                쓸쓸하랴? 얼마나 앞이 가진 듣는다.</a></td>
+            <td>1행 3열</td>
+            <td>1행 4열</td>
+          </tr>
+          <tr>
+            <td>2행 1열</td>
+            <td><a href="#">힘차게 어디 원질이 황금시대의 얼음에 소리다.이것은 사랑의 불어 이상은 뿐이다. 이상은 우는 긴지라 보이는 대한 때문이다. 봄바람을 보이는 같은 꽃이 이상이
+                쓸쓸하랴? 얼마나 앞이 가진 듣는다.</a></td>
+            <td>2행 3열</td>
+            <td>2행 4열</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2>가변 테이블1 - tableA클래스</h2>
+    <div class="table tableA">
+      <table>
+        <caption>가변 테이블</caption>
+        <tbody>
+          <tr>
+            <th>1행 1열</th>
+            <td>1행 2열</td>
+            <th>1행 3열</th>
+            <td>1행 4열</td>
+          </tr>
+          <tr>
+            <th>2행 1열</th>
+            <td colspan="3">2행 2열</td>
+          </tr>
+          <tr>
+            <th>3행 1열</th>
+            <td>3행 2열</td>
+            <th>3행 3열</th>
+            <td>3행 4열</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2>가변 테이블2 - tableB클래스</h2>
+    <div class="table tableB">
+      <table>
+        <caption>가변 테이블2</caption>
+        <colgroup>
+          <col style="width:15%">
+          <col>
+          <col style="width:15%">
+          <col style="width:15%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>항목1</th>
+            <th>항목2</th>
+            <th>항목3</th>
+            <th>항목4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1행 1열</td>
+            <td><a href="#">힘차게 어디 원질이 황금시대의 얼음에 소리다.이것은 사랑의 불어 이상은 뿐이다. 이상은 우는 긴지라 보이는 대한 때문이다. 봄바람을 보이는 같은 꽃이 이상이
+                쓸쓸하랴? 얼마나 앞이 가진 듣는다.</a></td>
+            <td>1행 3열</td>
+            <td>1행 4열</td>
+          </tr>
+          <tr>
+            <td>2행 1열</td>
+            <td><a href="#">힘차게 어디 원질이 황금시대의 얼음에 소리다.이것은 사랑의 불어 이상은 뿐이다. 이상은 우는 긴지라 보이는 대한 때문이다. 봄바람을 보이는 같은 꽃이 이상이
+                쓸쓸하랴? 얼마나 앞이 가진 듣는다.</a></td>
+            <td>2행 3열</td>
+            <td>2행 4열</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

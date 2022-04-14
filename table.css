@@ -1,0 +1,67 @@
+.table { margin: 10px 0; }
+
+.table.ta_c, .table .ta_c { text-align: center; }
+
+.table .ta_r { text-align: right; }
+
+.table .ta_l { text-align: left; }
+
+.table table { background-color: #fff; font-size: 16px; border-top: 2px solid #000; }
+
+.table th, .table td { border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; padding: 8px; }
+
+.table th:first-child, .table td:first-child { border-left: 0; }
+
+.table th:last-child, .table td:last-child { border-right: 0; }
+
+.table thead { background-color: #ddd; }
+
+.table tbody th { background-color: #eee; }
+
+.table tfoot { background-color: #ffdcdc; }
+
+.table tfoot th { background-color: #ffc4c4; }
+
+.table.scr { overflow-x: auto; overflow-y: hidden; }
+
+.table.scr table { min-width: 1000px; margin-top: 1px; }
+
+.table.fx-hd { position: relative; border-bottom: 1px solid #ccc; }
+
+.table.fx-hd .scr-y { overflow-x: hidden; overflow-y: scroll; }
+
+.table.fx-hd .scr-y tbody tr:last-of-type th, .table.fx-hd .scr-y tbody tr:last-of-type td { border-bottom: 0; }
+
+.table.fx-hd .clone-tb { position: absolute; left: 0; top: 0; width: 100%; z-index: 1; }
+
+.table.fx-hd .clone-tb > tbody, .table.fx-hd .clone-tb tfoot { display: none; }
+
+.table.tableA.mbT tbody > tr { display: table; width: 100%; }
+
+.table.tableA.mbT tbody > tr > th { width: 140px; }
+
+.table.tableA.mbT tbody > tr > th.hidden { display: none; }
+
+.table.tableA.mbT tbody > tr > th.hidden + td { display: table-row; width: 100%; border-left: 0; border-right: 0; }
+
+.table.tableA.mbT tbody > tr > th.hidden + td > span, .table.tableA.mbT tbody > tr > th.hidden + td > div { display: table-cell; padding: 8px; }
+
+.table.tableA.mbT tbody > tr > th.hidden + td > span { width: 140px; text-align: center; background-color: #eee; border-right: 1px solid #ccc; }
+
+.table.tableB.mbT table { display: block; border: 0; }
+
+.table.tableB.mbT colgroup { display: none; }
+
+.table.tableB.mbT thead { display: none; }
+
+.table.tableB.mbT tbody { display: block; }
+
+.table.tableB.mbT tbody > tr { display: block; border: 1px solid #000; margin: 10px auto; padding: 10px 0; width: 100%; }
+
+.table.tableB.mbT tbody > tr > td { display: table; width: 100%; border: 0; }
+
+.table.tableB.mbT tbody > tr > td > span, .table.tableB.mbT tbody > tr > td > div { display: table-cell; padding: 4px; }
+
+.table.tableB.mbT tbody > tr > td > span { min-width: 100px; text-align: center; }
+
+.table.tableB.mbT tbody > tr > td > div { width: 100%; }
