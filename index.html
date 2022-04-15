@@ -14,11 +14,9 @@
     #wrapper {
       padding: 40px;
     }
-
     h1 {
       font-size: 24px;
     }
-
     h2 {
       font-size: 18px;
       margin-top: 30px;
@@ -87,6 +85,10 @@
       </table>
     </div>
     <h2>x-스크롤 테이블 - scr클래스</h2>
+    <!-- 
+      1. 조건 : 테이블 기본형에 scr 클래스 추가. 
+      2. 기능 : 중단점 이하에서 테이블에 x 스크롤이 발생.
+    -->
     <div class="table scr">
       <table>
         <caption>스크롤 테이블</caption>
@@ -120,9 +122,11 @@
         </tbody>
       </table>
     </div>
-    <h2>y-스크롤 테이블(thead 고정) - fx-hd클래스</h2>
-    <!-- 테이블 헤더가 고정되고 스크롤 발생하는 경우 fx-hd 클래스 추가 
-        data-row="노출되고자 하는 줄의 개수" -->
+    <h2>y-스크롤 테이블(thead 고정) - fx-hd클래스</h2>   
+    <!-- 
+      1. 조건 : 테이블 기본형에 fx-hd 클래스 추가. data-row 값 추가 (화면에 출력이 필요한 행의 개수)
+      2. 기능 : 테이블에 y 스크롤이 발생하며 thead 영역이 테이블 상단에 고정.
+    -->
     <div class="table fx-hd" data-row="2">
       <table>
         <caption>가변 테이블2</caption>
@@ -173,6 +177,10 @@
       </table>
     </div>
     <h2>가변 테이블1 - tableA클래스</h2>
+    <!-- 
+      1. 조건 : tbody만 있는 테이블. tr안에 th+td | th+td 로 구성. 테이블 기본형에 tableA 클래스 추가
+      2. 기능 : 중단점 이하에서 4열을 2열 테이블 형태로 변환 (반응형).
+    -->
     <div class="table tableA">
       <table>
         <caption>가변 테이블</caption>
@@ -197,6 +205,10 @@
       </table>
     </div>
     <h2>가변 테이블2 - tableB클래스</h2>
+    <!-- 
+      1. 조건 : thead, tbody 테이블(예:게시판 리스트). 테이블 기본형에 tableB 클래스 추가
+      2. 기능 : 중단점 이하에서 테이블을 리스트 형태로 변환 (반응형).
+    -->
     <div class="table tableB">
       <table>
         <caption>가변 테이블2</caption>
